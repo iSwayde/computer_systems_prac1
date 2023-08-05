@@ -14,20 +14,7 @@ CHIP Not16 {
 
     PARTS:
     // Put your code here:
-    Nand(in=in[0], out=out[0]);
-    Nand(in=in[1], out=out[1]);
-    Nand(in=in[2], out=out[2]);
-    Nand(in=in[3], out=out[3]);
-    Nand(in=in[4], out=out[4]);
-    Nand(in=in[5], out=out[5]);
-    Nand(in=in[6], out=out[6]);
-    Nand(in=in[7], out=out[7]);
-    Nand(in=in[8], out=out[8]);
-    Nand(in=in[9], out=out[9]);
-    Nand(in=in[10], out=out[10]);
-    Nand(in=in[11], out=out[11]);
-    Nand(in=in[12], out=out[12]);
-    Nand(in=in[13], out=out[13]);
-    Nand(in=in[14], out=out[14]);
-    Nand(in=in[15], out=out[15]);
+    for(i=0; i<16; i+1) begin
+    Not(in=in[i], out=out[i]);
+    end
 }
