@@ -14,4 +14,7 @@ CHIP Or16 {
 
     PARTS:
     // Put your code here:
+    L1: for i in 0 to 15 loop
+        Or(a=a[i], b=b[i], out=out[i]);
+    end loop L1;
 }
