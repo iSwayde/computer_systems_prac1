@@ -14,5 +14,7 @@ CHIP Not16 {
 
     PARTS:
     // Put your code here:
-    Nand(in=in, out=out);
+    L1: for i in 0 to 15 loop
+        Nand(in=in[i]; out=out[i]);
+    end loop L1;
 }
